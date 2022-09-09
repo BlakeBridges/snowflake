@@ -1,5 +1,10 @@
 import streamlit
+import pandas
 
+fruit_list = pansas.read_cvs("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
+
+
+streamlit.dataframe(fruit_list)
 streamlit.header('Breakfast Menu')
 streamlit.text('Omega 3 & Blueberry Oatmeal')
 streamlit.text('Kale, Spinach & Rocket Smoothie')
