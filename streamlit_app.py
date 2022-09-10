@@ -45,4 +45,6 @@ streamlit.dataframe(my_data_rows)
 
 streamlit.header("Add fruit?")
 fruit_choice_insert = streamlit.text_input('What fruit would you like add?')
-my_cur.execute(f"insert into fruit_load_list values('{fruit_choice_insert}');")
+
+if fruit_choice_insert is not None:
+  my_cur.execute(f"insert into fruit_load_list values('{fruit_choice_insert}');")
